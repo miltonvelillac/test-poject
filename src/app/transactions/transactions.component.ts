@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TransactionActionsComponent } from './transaction-actions/transaction-actions.component';
 import { TransactionCardsComponent } from './transaction-cards/transaction-cards.component';
 import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
@@ -8,7 +8,8 @@ import { TransactionHistoryComponent } from './transaction-history/transaction-h
   standalone: true,
   imports: [TransactionCardsComponent, TransactionActionsComponent, TransactionHistoryComponent],
   templateUrl: './transactions.component.html',
-  styleUrl: './transactions.component.scss'
+  styleUrl: './transactions.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TransactionsComponent {
 

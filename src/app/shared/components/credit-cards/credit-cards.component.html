@@ -1,4 +1,4 @@
-<div class="credit-card" [ngClass]="getCardClass(creditCard?.id)">
+<div class="credit-card" [ngClass]="getCardClass(creditCard?.cardType)">
   <div class="credit-card__balance">{{creditCard?.balance | currency}}</div>
   <div class="credit-card__footer">
     <div class="credit-card__number">{{creditCard?.cardNumber}}</div>

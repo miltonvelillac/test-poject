@@ -5,25 +5,27 @@
   </header>
 
   <section class="content">
-    <section class="content__date">
-      <div>Yesterday</div>
-      <ul class="list">
-        @for (transaction of transactionHistory; track transaction.id) {
-          <li class="list__item">
-            <section class="list__content">
-              <img [src]="transaction.logo">
-              <div class="list__description">
-                <div class="list__name">{{transaction.title}}</div>
-                <time class="list__date">{{transaction.date}}</time>
-              </div>
-            </section>
-            <section class="list__balance" [ngClass]="{'list__balance--expense': transaction.balance < 0, 'list__balance--income': transaction.balance >= 0}">
-              {{transaction.balance | currency}}
-            </section>
-          </li>
-        }
-      </ul>
-    </section>
+    @for (transactions of transactionHistory; track transactions.id) {
+      <section class="content__date">
+        <div>{{transactions.title}}</div>
+        <ul class="list">
+          @for (transactionItem of transactions.transactionList; track transactionItem.id) {
+            <li class="list__item">
+              <section class="list__content">
+                <img [src]="transactionItem.logo">
+                <div class="list__description">
+                  <div class="list__title">{{transactionItem.title}}</div>
+                  <time class="list__date">{{transactionItem.date}}</time>
+                </div>
+              </section>
+              <section class="list__balance" [ngClass]="{'list__balance--expense': transactionItem.balance < 0, 'list__balance--income': transactionItem.balance >= 0}">
+                {{transactionItem.balance | currency}}
+              </section>
+            </li>
+          }
+        </ul>
+      </section>
+    }
   </section>
 
 </section>

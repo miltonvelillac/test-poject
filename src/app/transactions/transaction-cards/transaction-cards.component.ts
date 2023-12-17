@@ -1,32 +1,36 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CreditCardsEnum } from '../../shared/enums/credit-card.enum';
 import { CreditCard } from '../../shared/models/credit-card.model';
-import { CardsComponent } from '../cards/cards.component';
+import { CreditCardsComponent } from '../../shared/components/credit-cards/credit-cards.component';
 
 @Component({
   selector: 'app-transaction-cards',
   standalone: true,
-  imports: [CommonModule, CardsComponent],
+  imports: [CommonModule, CreditCardsComponent],
   templateUrl: './transaction-cards.component.html',
-  styleUrl: './transaction-cards.component.scss'
+  styleUrl: './transaction-cards.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TransactionCardsComponent {
   creditCards: CreditCard[] = [
     {
-      id: CreditCardsEnum.mc,
+      id: '1',
+      cardType: CreditCardsEnum.mc,
       balance: 542.25,
       cardNumber: '4587',
       logo: 'assets/icons/master-card.svg'
     },
     {
-      id: CreditCardsEnum.vs,
+      id: '2',
+      cardType: CreditCardsEnum.vs,
       balance: 999.25,
       cardNumber: '9876',
       logo: 'assets/icons/visa.svg'
     },
     {
-      id: CreditCardsEnum.am,
+      id: '3',
+      cardType: CreditCardsEnum.mc,
       balance: 4231.25,
       cardNumber: '3456',
       logo: 'assets/icons/master-card.svg'
