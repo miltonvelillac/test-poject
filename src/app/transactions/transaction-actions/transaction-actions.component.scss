@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--color_primary);
 }
 
 .action:hover {
@@ -22,7 +23,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #366AB2;
+  background-color: var(--color_primary);
   display: flex;
   justify-content: center;
   align-items: center;
