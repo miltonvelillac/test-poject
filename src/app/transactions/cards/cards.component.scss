@@ -1,0 +1,21 @@
+.credit-card {
+  width: 288px;
+  height: 180px;
+  border-radius: 16px;
+  background: linear-gradient(111deg, #4B4F5B 0%, #6B7183 100%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+
+  &__balance {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
