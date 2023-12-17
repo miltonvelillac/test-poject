@@ -26,6 +26,12 @@
   }
 }
 
+.content {
+  height: calc(100vh - 490px);
+  max-height: 100%;
+  overflow: auto;
+}
+
 .list {
   list-style-type: none;
   padding: 0;

@@ -1,0 +1,11 @@
+<section class="carousel-container">
+  <ul class="carousel list" [ngStyle]="{'transform': 'translateX(' + (-currentCard * 100) + '%)'}" >
+    @for (creditCard of creditCards; track creditCard.id) {
+      <div>
+        <app-cards [creditCard]="creditCard"></app-cards>
+      </div>
+    }
+  </ul>
+  <div class="carousel__prev" (click)="prevSlide()">&#10094;</div>
+  <div class="carousel__next" (click)="nextSlide()">&#10095;</div>
+</section>

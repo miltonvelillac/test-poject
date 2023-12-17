@@ -24,6 +24,20 @@ export class TransactionHistoryComponent {
       date: 'Jul 3, 2022 19:13',
       title: 'Starbucks',
       logo: 'assets/icons/starbucks.svg'
+    },
+    {
+      id: '3',
+      balance: -5.42,
+      date: 'Jul 3, 2022 19:13',
+      title: 'Starbucks',
+      logo: 'assets/icons/starbucks.svg'
+    },
+    {
+      id: '4',
+      balance: -5.42,
+      date: 'Jul 3, 2022 19:13',
+      title: 'Starbucks',
+      logo: 'assets/icons/starbucks.svg'
     }
   ];
 }

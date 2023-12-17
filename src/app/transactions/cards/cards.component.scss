@@ -2,7 +2,6 @@
   width: 288px;
   height: 180px;
   border-radius: 16px;
-  background: linear-gradient(111deg, #4B4F5B 0%, #6B7183 100%);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -14,8 +13,34 @@
     font-weight: 600;
   }
 
+  &__number {
+    margin: auto 0;
+  }
+
+  &__number::before {
+    content: '**** ';
+  }
+
+  &__logo {
+    width: 84px;
+    height: 58px;
+  }
+
   &__footer {
     display: flex;
     justify-content: space-between;
   }
 }
+
+.american-express {
+  background: linear-gradient(111deg, #4B4F5B 0%, #6B7183 100%);
+}
+
+.master-card {
+  background: linear-gradient(111deg, #4B4F5B 0%, #6B7183 100%);
+}
+
+.visa {
+  background: linear-gradient(111deg, #407288 0%, #189BD4 100%);;
+}
+
